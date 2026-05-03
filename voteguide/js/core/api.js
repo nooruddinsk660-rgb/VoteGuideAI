@@ -1,5 +1,12 @@
 const API = (() => {
-  const BACKEND_EP = 'http://localhost:3000/api/ask';
+  // CONFIG: Replace with your deployed backend URL (e.g., on Render or Railway)
+  const PROD_BACKEND = 'https://voteguide-backend.onrender.com/api/ask';
+  const DEV_BACKEND  = 'http://localhost:3000/api/ask';
+
+  const BACKEND_EP = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+    ? DEV_BACKEND
+    : PROD_BACKEND;
+
 
   // FIX: The system prompt is now built entirely on the server from validated inputs.
   // Previously, the full system prompt was constructed client-side and sent in the request body,
