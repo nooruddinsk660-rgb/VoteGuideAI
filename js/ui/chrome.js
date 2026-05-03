@@ -133,13 +133,16 @@ const Modal = {
   close(){ document.getElementById('vg-modal')?.classList.remove('show'); },
   async checkServer() {
     const statusEl=document.getElementById('modal-status');
+    const base = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+      ? 'http://localhost:3000'
+      : 'https://voteguideai.onrender.com';
+    
     statusEl.textContent='⏳ Checking…';
     try {
-      const r = await fetch('http://localhost:3000/health', { method:'GET' });
+      const r = await fetch(`${base}/health`, { method:'GET' });
       if(r.ok) {
         statusEl.textContent='✓ Backend is running and ready!';
         statusEl.style.color='var(--ok, #22c55e)';
-        // Mark as server-confirmed ready — no key stored in browser
         S.s('serverReady', true);
         Header.markKey();
         this.close();
@@ -149,14 +152,16 @@ const Modal = {
         statusEl.style.color='var(--warn, #f59e0b)';
       }
     } catch(_) {
-      statusEl.textContent='✗ Cannot reach server. Is it running on port 3000?';
+      statusEl.textContent='✗ Cannot reach server. Is it running?';
       statusEl.style.color='var(--ruby, #ef4444)';
     }
   },
-  // Called on app boot to silently verify backend availability
   async silentCheck() {
+    const base = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+      ? 'http://localhost:3000'
+      : 'https://voteguideai.onrender.com';
     try {
-      const r = await fetch('http://localhost:3000/health', { method:'GET' });
+      const r = await fetch(`${base}/health`, { method:'GET' });
       if(r.ok) { S.s('serverReady', true); Header.markKey(); return true; }
     } catch(_) {}
     return false;
