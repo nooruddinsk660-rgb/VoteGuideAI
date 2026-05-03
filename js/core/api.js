@@ -1,7 +1,7 @@
 const API = (() => {
   // CONFIG: Replace with your deployed backend URL (e.g., on Render or Railway)
-  const PROD_BACKEND = 'https://voteguide-backend.onrender.com/api/ask';
-  const DEV_BACKEND  = 'http://localhost:3000/api/ask';
+  const PROD_BACKEND = 'https://voteguideai.onrender.com/api/ask';
+  const DEV_BACKEND = 'http://localhost:3000/api/ask';
 
   const BACKEND_EP = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
     ? DEV_BACKEND
@@ -22,18 +22,18 @@ const API = (() => {
     // We no longer read or transmit the raw API key from the frontend.
     // Send only conversation history + context metadata; the server builds the system prompt.
     const payload = {
-      contents:   hist,
-      voterType:  S.g('voter'),
-      state:      S.g('state'),
-      lang:       S.g('lang'),
+      contents: hist,
+      voterType: S.g('voter'),
+      state: S.g('state'),
+      lang: S.g('lang'),
     };
 
     let response;
     try {
       response = await fetch(BACKEND_EP, {
-        method:  'POST',
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(payload),
+        body: JSON.stringify(payload),
       });
     } catch (networkErr) {
       // Backend is unreachable (server not running, network down, etc.)
