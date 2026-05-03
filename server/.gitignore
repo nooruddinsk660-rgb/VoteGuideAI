@@ -1,0 +1,188 @@
+# ═══════════════════════════════════════════════════════════════════════════
+# VoteGuide Backend - Complete .gitignore
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ──────────────────────────────────────────────────────────────────────────
+# 📦 Node.js Dependencies & Package Manager
+# ──────────────────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pnpm-error.log*
+.pnpm-store/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+lerna-debug.log
+
+# ──────────────────────────────────────────────────────────────────────────
+# 🔐 Environment & Secrets (CRITICAL - Never commit!)
+# ──────────────────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.private
+.env.secret
+*.pem
+*.key
+
+# ──────────────────────────────────────────────────────────────────────────
+# 📝 Logs & Temporary Files
+# ──────────────────────────────────────────────────────────────────────────
+logs/
+*.log
+*.log.*
+lerna-debug.log*
+*.swp
+*.swo
+*~
+.#*
+
+# ──────────────────────────────────────────────────────────────────────────
+# 🏗️ Build & Distribution Outputs
+# ──────────────────────────────────────────────────────────────────────────
+dist/
+build/
+out/
+*.tsbuildinfo
+.next/
+.nuxt/
+coverage/
+.cache/
+
+# ──────────────────────────────────────────────────────────────────────────
+# 🧪 Testing & Coverage
+# ──────────────────────────────────────────────────────────────────────────
+.nyc_output/
+coverage/
+*.lcov
+.coverage
+.pytest_cache/
+.mocha.timeout.json
+
+# ──────────────────────────────────────────────────────────────────────────
+# 💾 OS & System Files
+# ──────────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.exe
+.AppleDouble
+.LSOverride
+
+# ──────────────────────────────────────────────────────────────────────────
+# 🛠️ IDE & Editor Files
+# ──────────────────────────────────────────────────────────────────────────
+# VS Code
+.vscode/
+*.code-workspace
+.history/
+
+# WebStorm / IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+.gradle/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.vim
+.vim/
+.netrwhist
+Session.vim
+
+# Atom
+.atom/
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Nano
+.nano_history
+
+# General
+.editorconfig
+*.bak
+*.tmp
+
+# ──────────────────────────────────────────────────────────────────────────
+# 🔗 Dependencies & Lock Files (Platform Specific)
+# ──────────────────────────────────────────────────────────────────────────
+# Uncomment if you want to commit lock files (recommended for projects)
+# If using yarn exclusively:
+# !yarn.lock
+# If using npm exclusively:
+# !package-lock.json
+
+# ──────────────────────────────────────────────────────────────────────────
+# 🌐 Runtime & Process Files
+# ──────────────────────────────────────────────────────────────────────────
+*.pid
+*.seed
+*.pid.lock
+.forever/
+
+# ──────────────────────────────────────────────────────────────────────────
+# 🔧 Local Development
+# ──────────────────────────────────────────────────────────────────────────
+.nodemon.json
+.env.development
+.local
+.vscode-test/
+test-reports/
+*.swp
+*.swo
+
+# ──────────────────────────────────────────────────────────────────────────
+# 📊 Databases & Caches
+# ──────────────────────────────────────────────────────────────────────────
+*.sqlite
+*.sqlite3
+*.db
+*.mongodb
+.mongo/
+redis/
+*.rdb
+
+# ──────────────────────────────────────────────────────────────────────────
+# 📦 Runtime & Compiled Files
+# ──────────────────────────────────────────────────────────────────────────
+*.js.map
+*.d.ts
+*.tgz
+*.tar.gz
+
+# ──────────────────────────────────────────────────────────────────────────
+# 🎯 Project-Specific (VoteGuide Backend)
+# ──────────────────────────────────────────────────────────────────────────
+# Any local test data
+test-data/
+temp/
+tmp/
+uploads/
+.test-results/
+
+# ──────────────────────────────────────────────────────────────────────────
+# ⚠️ Keep These (Important Project Files)
+# ──────────────────────────────────────────────────────────────────────────
+!.env.example
+!.gitkeep
+!README.md
+!package.json
+!package-lock.json
