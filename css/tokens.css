@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+/* ══════════════════════════════════════════
+   DARK THEME (default)
+══════════════════════════════════════════ */
+:root, [data-theme="dark"] {
+  --bg-root:    #060810;
+  --bg-app:     rgba(7,9,18,0.91);
+  --bg-0:       transparent;
+  --bg-1:       rgba(255,255,255,0.030);
+  --bg-2:       rgba(255,255,255,0.055);
+  --bg-3:       rgba(255,255,255,0.085);
+  --bg-4:       rgba(255,255,255,0.120);
+  --bg-5:       rgba(255,255,255,0.175);
+  --bg-input:   rgba(255,255,255,0.058);
+  --bg-hover:   rgba(255,255,255,0.065);
+
+  --bd-0: rgba(255,255,255,0.060);
+  --bd-1: rgba(255,255,255,0.100);
+  --bd-2: rgba(255,255,255,0.160);
+  --bd-3: rgba(255,255,255,0.240);
+
+  --tx-1: #F2F4FF;
+  --tx-2: rgba(242,244,255,0.58);
+  --tx-3: rgba(242,244,255,0.30);
+  --tx-4: rgba(242,244,255,0.13);
+  --tx-inv:#060810;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.35);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.50);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.65);
+  --shadow-xl: 0 20px 60px rgba(0,0,0,0.75);
+
+  --noise-op: 0.025;
+  color-scheme: dark;
+}
+
+/* ══════════════════════════════════════════
+   LIGHT THEME
+══════════════════════════════════════════ */
+[data-theme="light"] {
+  --bg-root:    #F5F0E8;
+  --bg-app:     rgba(253,251,245,0.96);
+  --bg-0:       transparent;
+  --bg-1:       rgba(0,0,0,0.028);
+  --bg-2:       rgba(0,0,0,0.052);
+  --bg-3:       rgba(0,0,0,0.078);
+  --bg-4:       rgba(0,0,0,0.110);
+  --bg-5:       rgba(0,0,0,0.160);
+  --bg-input:   rgba(0,0,0,0.042);
+  --bg-hover:   rgba(0,0,0,0.055);
+
+  --bd-0: rgba(0,0,0,0.080);
+  --bd-1: rgba(0,0,0,0.120);
+  --bd-2: rgba(0,0,0,0.180);
+  --bd-3: rgba(0,0,0,0.260);
+
+  --tx-1: #0D0F1A;
+  --tx-2: rgba(13,15,26,0.60);
+  --tx-3: rgba(13,15,26,0.36);
+  --tx-4: rgba(13,15,26,0.14);
+  --tx-inv:#F2F4FF;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.16);
+  --shadow-xl: 0 20px 60px rgba(0,0,0,0.20);
+
+  --noise-op: 0.018;
+  color-scheme: light;
+}
+
+/* ══════════════════════════════════════════
+   BRAND CONSTANTS (theme-invariant)
+══════════════════════════════════════════ */
+:root {
+  /* Saffron scale */
+  --s-50:  #FFF4EC; --s-100: #FFDFBF; --s-200: #FFC58A;
+  --s-300: #FFAA55; --s-400: #FF8D2A; --s-500: #FF6600;
+  --s-600: #E05400; --s-700: #B84200; --s-800: #8C3100;
+
+  /* Chakra blue */
+  --b-300: #7AACFF; --b-400: #4585FF; --b-500: #1A5CFF; --b-700: #0838CC;
+
+  /* Ashoka green */
+  --g-300: #4DEBA0; --g-400: #00D46A; --g-500: #00B857; --g-700: #007A3B;
+
+  /* Gold */
+  --gold:  #D4A017; --gold-l: #F0C040; --gold-d: #A67C10;
+
+  /* Ruby */
+  --ruby:  #FF2D55; --ruby-d: #CC1F42;
+
+  /* Brand alpha */
+  --sa-08: rgba(255,102,0,0.08);  --sa-12: rgba(255,102,0,0.12);
+  --sa-18: rgba(255,102,0,0.18);  --sa-25: rgba(255,102,0,0.25);
+  --sa-40: rgba(255,102,0,0.40);  --sa-60: rgba(255,102,0,0.60);
+  --ba-10: rgba(26,92,255,0.10);  --ba-18: rgba(26,92,255,0.18);
+  --ga-10: rgba(0,212,106,0.10);  --ga-20: rgba(0,212,106,0.20);
+  --ra-10: rgba(255,45,85,0.10);
+
+  /* Typography */
+  --f-d: 'Outfit', sans-serif;
+  --f-b: 'Inter', sans-serif;
+
+  /* Motion */
+  --ez:  cubic-bezier(0.23,1.00,0.32,1.00);
+  --ezs: cubic-bezier(0.34,1.56,0.64,1.00);
+  --ezi: cubic-bezier(0.55,0.00,1.00,0.45);
+
+  /* Radius */
+  --r1:6px; --r2:10px; --r3:14px; --r4:18px; --r5:22px; --r6:28px; --r7:36px;
+}
+
+/* saffron border shortcuts */
+[data-theme="dark"] {
+  --bd-s:  rgba(255,102,0,0.32);
+  --bd-s2: rgba(255,102,0,0.60);
+  --bd-g:  rgba(0,212,106,0.30);
+  --bd-b:  rgba(26,92,255,0.30);
+  --bd-r:  rgba(255,45,85,0.30);
+}
+[data-theme="light"] {
+  --bd-s:  rgba(255,102,0,0.40);
+  --bd-s2: rgba(255,102,0,0.70);
+  --bd-g:  rgba(0,184,87,0.40);
+  --bd-b:  rgba(26,92,255,0.40);
+  --bd-r:  rgba(255,45,85,0.40);
+}
